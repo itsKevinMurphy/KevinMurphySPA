@@ -18,7 +18,7 @@ app.use(bodyParser.json({ type: 'application/vnd.api+json' })); // parse applica
 app.use(methodOverride());
 
 // security=====================================================================================
-var security = require('./Security/security.js');// security file
+//var security = require('./Security/security.js');// security file
 
 //Check database connection =====================================================================
 var db = mongoose.connection;
