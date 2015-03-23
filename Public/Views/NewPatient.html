@@ -1,0 +1,35 @@
+﻿<!-- Public/Views/NewPatient.html -->
+
+<div>
+
+    <div id="headPatient">
+        Add Patient - Current Number:
+        <span class="label label-info" id="patientLabel" href="/">{{ patients.length }}</span>
+
+    </div>
+    <form class="form" role="form" id="patient-form" method="post">
+        <div class="form-group">
+            <label for="firstName">First Name:</label>
+            <input type="text" class="form-control" id="firstName" required placeholder="Enter First Name" ng-model="patientData.firstName">
+        </div>
+        <div class="form-group">
+            <label for="lastName">Last Name:</label>
+            <input type="text" class="form-control" id="lastName" required placeholder="Enter Last Name" ng-model="patientData.lastName">
+        </div>
+        <div class="form-group">
+            <label for="phoneNo">Phone Number:</label>
+            <input type="tel" class="form-control" id="phoneNo" required onclick="maskon" placeholder="Enter Phone Number" ng-model="patientData.phoneNo">
+        </div>
+        <div class="form-group">
+            <label for="lastVisitDate">Last Visit Date:</label>
+            <input type="date" class="form-control" id="lastVisitDate" ng-model="patientData.lastVisitDate">
+        </div>
+        <div class="checkbox">
+            <label><input type="checkbox" ng-model="patientData.status"> Active</label>
+        </div>
+        <button type="submit" class="btn btn-default" ng-click="createPatient(patientData)">Add Patient</button>
+        <button type="reset" class="btn btn-default">Reset</button>
+    </form>
+    <span class ="label label-info">Patient: {{patientData}}</span>
+</div>
+

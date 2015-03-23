@@ -1,0 +1,44 @@
+﻿
+<!doctype html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1"><!-- Optimize mobile viewport -->
+    <base href="/">
+    <title>Kevin's Healthcare Emporium</title>
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script><!-- load jquery -->
+    <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.0.8/angular.min.js"></script><!-- load angular -->
+    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css"><!-- load bootstrap -->
+    <link href="Assets/styleHealthApp.css" rel="stylesheet" /><!--Load CSS-->
+    <script src="Scripts/main.js"></script><!--Main Controller-->
+    <script src="Views/views.js"></script><!--Views Controller-->
+    <script src="app.js"></script><!--Main Application-->
+    <script src="Scripts/patientService.js"></script><!-- load our patient service -->
+
+</head>
+<body ng-app="myApp">
+    <div ng-controller="mainController">
+        <div class="container">
+            <!-- HEADER AND Patient COUNT -->
+            <div class="jumbotron text-center">
+                <h1>Kevin's Health Emporium <br /></h1>
+            </div>
+            <nav class="navbar navbar-inverse">
+                <div class="navbar-header">
+                    <a class="navbar-brand" href="/">Patient List: <input type="text" placeholder="Search by Surname" id="searchInput" ng-model="search.lastName" value="*" /></a>
+                </div>
+                <!-- LINK TO OUR PAGES. ANGULAR HANDLES THE ROUTING HERE -->
+                <ul class="nav navbar-nav">
+                    <li><a href="/NewPatient">Add New</a></li>
+                </ul>
+            </nav>
+            <div ng-view></div>          
+                       
+        </div>
+    </div>
+
+
+</body>
+</html>

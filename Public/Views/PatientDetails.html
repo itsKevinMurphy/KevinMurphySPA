@@ -1,0 +1,32 @@
+﻿<!-- Public/Views/PatientDetails.html -->
+<div>
+
+    <div id="headPatient">
+        Edit Patient Details
+        <span class="label label-info" href="/">Patients: {{ patients.length }}</span>
+
+    </div>
+    <form class="form" role="form" id="patient-form" method="put">
+        <div class="form-group">
+            <label for="firstName">First Name:</label>
+            <input type="text" class="form-control" id="firstName" required value={{patient.firstName}} ng-model="patientData.firstName">
+        </div>
+        <div class="form-group">
+            <label for="lastName">Last Name:</label>
+            <input type="text" class="form-control" id="lastName" required value={{patient.lastName}} ng-model="patientData.lastname">
+        </div>
+        <div class="form-group">
+            <label for="phoneNo">Phone Number:</label>
+            <input type="tel" class="form-control" id="phoneNo" required value={{patient.phoneNo}} ng-model="patientData.phoneNo">
+        </div>
+        <div class="form-group">
+            <label for="lastVisitDate">Last Visit Date:</label>
+            <input type="date" class="form-control" id="lastVisitDate" value={{patient.lastVisitDate}} ng-model="patientData.lastVisitDate" >
+        </div>
+        <div class="checkbox">
+            <label><input type="checkbox" value={{patient.status}} ng-model="patientData.status"> Active</label>
+        </div>
+        <button type="submit" class="btn btn-default" ng-click="updatePatient()">Update Patient</button>
+        <button type="reset" class="btn btn-default">Reset</button>
+    </form>
+</div>

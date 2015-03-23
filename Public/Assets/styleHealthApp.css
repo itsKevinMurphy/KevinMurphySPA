@@ -1,0 +1,29 @@
+﻿body {
+    align-content:center;
+}
+
+#headPatient {
+color:cadetblue;
+text-align:center;
+text-shadow:20px 12px 2px inherit;
+font-size: 3vw;
+font-weight:bold;
+background-color:lightgray;
+padding-bottom:7px;
+padding-top:5px;
+}
+
+div.scrollWrapper{
+  height:250px;
+  overflow:scroll;
+}
+#patientLabel {
+font-size:3vw;   
+}
+
+#patientOrder {
+  color: black;
+}
+#searchInput {
+position:relative;
+}
